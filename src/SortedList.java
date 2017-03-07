@@ -5,7 +5,7 @@ public class SortedList<T extends Comparable<? super T>> implements SortedListIn
 	private ListInterface<T> list;
 
 	public SortedList() {
-		list = new List<T>();
+		list = new ListLinked<T>();
 	}
 
 	public void add(T newEntry) {
@@ -74,7 +74,8 @@ public class SortedList<T extends Comparable<? super T>> implements SortedListIn
 	}
 
 	@Override
-	public T[] toArray() {
+	public T[] toArray() {		System.out.println("In");
+
 		return list.toArray();
 
 	}
